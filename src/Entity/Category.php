@@ -23,15 +23,13 @@ class Category
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank
-     * @Assert\Type("\String")
+     * @Assert\NotBlank     
      */
     private $name;
 
     /**
      * @ORM\Column(type="boolean")
-     * @Assert\NotBlank
-     * @Assert\Type("\Boolean")
+     * @Assert\NotBlank     
      */
     private $active;
 
@@ -41,16 +39,12 @@ class Category
     private $products;
 
     /**
-     * @ORM\Column(type="datetime")
-     * @Assert\NotBlank
-     * @Assert\Type("\Datetime")
+     * @ORM\Column(type="datetime")     
      */
     private $createdAt;
 
     /**
-     * @ORM\Column(type="datetime")
-     * @Assert\NotBlank
-     * @Assert\Type("\Datetime")
+     * @ORM\Column(type="datetime")     
      */
     private $updatedAt;
 

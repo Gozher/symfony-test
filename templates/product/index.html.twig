@@ -16,7 +16,12 @@
     <thead class="bg-dark text-white">
         <tr>
         <th scope="col">#</th>
+        <th scope="col">Codigo</th>
         <th scope="col">Categoria</th>
+        <th scope="col">Producto</th>
+        <th scope="col">Descripcion</th>
+        <th scope="col">Marca</th>
+        <th scope="col">Precio</th>        
         <th scope="col">Fecha creacion</th>
         <th scope="col">Fecha Actualizacion</th>
         <th scope="col">Acciones</th>
@@ -26,7 +31,12 @@
     {% for item in products %}
         <tr>
         <th scope="row">{{item.id}}</th>
+        <td>{{item.code}}</td>
+        <td>{{item.getCategory().getName()}}</td>
         <td>{{item.name}}</td>
+        <td>{{item.description}}</td>
+        <td>{{item.brand}}</td>
+        <td>{{item.price}}</td>        
         <td>{{item.createdAt|date}}</td>
         <td>{{item.updatedAt|date}}</td>
         <td>

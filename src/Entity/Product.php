@@ -25,51 +25,42 @@ class Product
     private $category;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank
-     * @Assert\Type("\String")
+     * @Assert\NotBlank          
+     * @Assert\Length(max=5)
+     * @ORM\Column(type="string", length=255)     
      */
     private $code;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank
-     * @Assert\Type("\String")
+    /**           
+     * @ORM\Column(type="string", length=255)     
      */
     private $name;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank
-     * @Assert\Type("\String")
+     * @Assert\NotBlank     
      */
     private $description;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank
-     * @Assert\Type("\String")
+     * @Assert\NotBlank     
      */
     private $brand;
 
     /**
      * @ORM\Column(type="float")
-     * @Assert\NotBlank
-     * @Assert\Type("\Float")
+     * @Assert\NotBlank     
      */
     private $price;
 
     /**
-     * @ORM\Column(type="datetime")
-     * @Assert\NotBlank
-     * @Assert\Type("\Datetime")
+     * @ORM\Column(type="datetime")     
      */
     private $createdAt;
 
     /**
-     * @ORM\Column(type="datetime")
-     * @Assert\NotBlank
-     * @Assert\Type("\Datetime")
+     * @ORM\Column(type="datetime")     
      */
     private $updatedAt;
 
