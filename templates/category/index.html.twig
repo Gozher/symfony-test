@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Categorias!{% endblock %}
+
+{% block body %}
+<h3>Listado de categorias</h3>
+<div class="my-4">
+    <a href="{{ path('create_category') }}" class="btn btn-primary">Nueva categoria</a>
+</div>
+
+<div class="my-4">
+
+    <table class="table">
+    <thead class="bg-dark text-white">
+        <tr>
+        <th scope="col">#</th>
+        <th scope="col">Categoria</th>
+        <th scope="col">Fecha creacion</th>
+        <th scope="col">Fecha Actualizacion</th>
+        <th scope="col">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for item in allCategories %}
+        <tr>
+        <th scope="row">{{item.id}}</th>
+        <td>{{item.name}}</td>
+        <td>{{item.createdAt|date}}</td>
+        <td>{{item.updatedAt|date}}</td>
+        <td>
+        <a href="{{ path('update_category', {id: item.id}) }}" class="btn btn-warning"> Editar</a>
+        <a href="{{ path('delete_category', {id: item.id}) }}" class="btn btn-danger">Borrar</a>
+        </td>
+        </tr>    
+    {% endfor %}
+    </tbody>
+    </table>
+
+</div>
+
+
+</div>
+{% endblock %}

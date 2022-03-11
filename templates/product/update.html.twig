@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Actualizacion de productos!!{% endblock %}
+
+{% block body %}
+
+<h3>Actualizacion de productos</h3>
+
+<div class="container">
+  <div class="row justify-content-md-center">
+    
+    <div class="col col-lg-4 ">          
+      {{ form(form) }}
+    <a href="{{ path('app_product') }}" class="btn btn-secondary">Regresar</a>
+    </div>
+    
+  </div>
+</div>
+
+{% endblock %}
